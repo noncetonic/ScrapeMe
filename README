@@ -1,0 +1,9 @@
+Changelog
+
+1.2
+
+Added signature "database" to allow for smaller code
+
+1.1
+
+Added threading and uploaded to github for easier version control
