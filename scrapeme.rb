@@ -1,4 +1,4 @@
-#ScrapeBB.rb v1.2
+#ScrapeBB.rb v1.2.1
 #phpBB3 Memberlist Scraping Tool
 #Coded by Luis Santana
 #HackTalk Security Team
