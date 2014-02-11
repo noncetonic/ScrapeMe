@@ -20,7 +20,7 @@ puts "*           HackTalk Security          *"
 puts "****************************************"
 
 # Let's create our signature "database"
-sigs = Array['/html/body/div/div[2]/div[2]/form/div[2]/div/table/tbody/tr/td/a','/html/body/table/tbody/tr[5]/td/form[2]/table/tbody/tr/td[2]/a','/html/body/div/div[4]/div/div/div[3]/form/div[2]/div/table/tbody/tr/td/a']
+sigs = Array['/html/body/div/div[2]/div[2]/form/div[2]/div/table/tbody/tr/td/a','/html/body/table/tbody/tr[5]/td/form[2]/table/tbody/tr/td[2]/a','/html/body/div/div[4]/div/div/div[3]/form/div[2]/div/table/tbody/tr/td/a', '/html/body/div/div/form/div/div/table/tbody/tr/td/a']
 # Get username, password, and website for scraping
 puts "[+] Enter your username:"
 user = gets.chomp
@@ -47,7 +47,7 @@ page = agent.get("http://#{site}/memberlist.php?start=0")
 pages = page.body.match(/of..strong.([0-9]+)/m)
 
 # Get our threadpool started with 25 threads with a max of 20 threads which can be waiting in the queue
-wq = WorkQueue.new(25,20)
+wq = WorkQueue.new(25)
 
 users = Array.new # Create array to hold usernames so that we don't potentially deadlock the dump file during writes
 
